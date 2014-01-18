@@ -10,7 +10,7 @@
       $(function () { $('#resolve').click(function (e) { 
         $.getJSON( "http://skype.freedumbs.net/api/" + document.getElementById("skype").value, function( data ) {
           var ipDiv = document.getElementById("ipTable")
-          ipDiv.innerHTML=ipDiv.innerHTML + data.map(function (item) { return item.public }).join('<td>');
+          ipDiv.innerHTML=ipDiv.innerHTML + "<td>" + document.getElementById("skype").value + "<td>" + data.map(function (item) { return item.public }).join('<td>');
         }); e.preventDefault(); return false; }) });
     </script>
   </head>
