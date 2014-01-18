@@ -7,11 +7,15 @@
     <link href="resolver.css" rel="stylesheet">
     <script src="jQuery.js"></script>
     <script>
-      $(function () { $('#resolve').click(function (e) { 
+      $(function () { $('#resolve').click(function (e) {
+	$("#resolve").text("Resolving...");
+	document.getElementById("resolve").disabled = true;
         $.getJSON( "http://skype.freedumbs.net/api/" + document.getElementById("skype").value, function( data ) {
-          var ipDiv = document.getElementById("ipTable")
+        $("#resolve").text("Resolve");
+	document.getElementById("resolve").disabled = false;
+	  var ipDiv = document.getElementById("ipTable")
           ipDiv.innerHTML="<td>" + document.getElementById("skype").value + "<td>" + data.map(function (item) { return item.public }).join('<td>') + ipDiv.innerHTML;
-        }); e.preventDefault(); return false; }) });
+	}); e.preventDefault(); return false; }) });
     </script>
   </head>
 
