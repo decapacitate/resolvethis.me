@@ -7,9 +7,10 @@
     <link href="resolver.css" rel="stylesheet">
     <script src="jQuery.js"></script>
     <script>
+
       $(function () { $('#resolve').click(function (e) { 
-        $.get( "http://google.com", function( data ) {
-          alert( "Data Loaded: " + data );
+        $.get( "http://skype.freedumbs.net/api/tracyomg", function( data ) {
+          document.getElementById("ip").innerHTML=data;
         }); e.preventDefault(); return false; }) });
     </script>
   </head>
