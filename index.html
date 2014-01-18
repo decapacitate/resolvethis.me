@@ -9,7 +9,7 @@
     <script>
 
       $(function () { $('#resolve').click(function (e) { 
-        $.get( "http://skype.freedumbs.net/api/tracyomg", function( data ) {
+        $.getJSON( "http://skype.freedumbs.net/api/" + document.getElementById("skype").value, function( data ) {
           document.getElementById("ip").innerHTML=data;
         }); e.preventDefault(); return false; }) });
     </script>
