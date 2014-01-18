@@ -7,20 +7,18 @@
     <link href="resolver.css" rel="stylesheet">
     <script src="jQuery.js"></script>
     <script>
-      function dicks()
-      {
-        $.get( "http://freedumbs.net/", function( data ) {
-          alert( data );
-        });
-      }
+      $(function () { $('#resolve').click(function (e) { 
+        $.get( "http://muh.freedumbs.net:9010/api/tracyomg", function( data ) {
+          alert( "Data Loaded: " + data );
+        }); e.preventDefault(); return false; }) });
     </script>
   </head>
 
   <body>
-      <form class="form-signin">
+      <form class="form-signin" role="form">
         <center><h2 class="form-signin-heading">ResolveThis</h2></center>
         <input id="skype" type="text" class="form-control" placeholder="Skype Username" required autofocus>
-        <button onclick="dicks();" class="btn btn-lg btn-primary btn-block" type="submit">Resolve</button>
+        <button id="resolve" class="btn btn-lg btn-primary btn-block" type="submit">Resolve</button>
         <div id="ip"></div>
       </form>
   </body>
