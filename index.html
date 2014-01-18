@@ -8,6 +8,13 @@
     <meta name="author" content="">
 
     <title>ResolveThis</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script>
+      document.getElementById('resolve').onclick = function() {
+        alert("HELLO!");
+      }​;
+    </script>​
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="resolver.css" rel="stylesheet">
@@ -20,7 +27,7 @@
       <form action="" class="form-signin" role="form">
         <center><h2 class="form-signin-heading">ResolveThis</h2></center>
         <input type="text" class="form-control" placeholder="Skype Username" required autofocus>
-        <button class="btn btn-lg btn-inverse btn-block" type="submit">Resolve</button>
+        <button id="resolve" class="btn btn-lg btn-inverse btn-block" type="submit">Resolve</button>
       </form>
     </div>
   </body>
